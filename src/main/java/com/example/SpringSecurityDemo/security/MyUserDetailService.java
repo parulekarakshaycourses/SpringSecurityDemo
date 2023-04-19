@@ -12,8 +12,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Service
-public class MyUserDetailService implements UserDetailsService {
-
+public class MyUserDetailService implements UserDetailsService
+{
     private final UserRepo userRepo;
 
     public MyUserDetailService(UserRepo userRepo) {
