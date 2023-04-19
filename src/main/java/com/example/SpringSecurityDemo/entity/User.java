@@ -1,6 +1,5 @@
 package com.example.SpringSecurityDemo.entity;
 
-
 import jakarta.persistence.*;
 
 @Entity
@@ -10,6 +9,7 @@ public class User
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_seq")
     @SequenceGenerator(name = "user_seq")
     Long id;
+    String name;
     String username;
     String password;
     int idDesignation; // 0 for admin; 1 for employee; 2 for manager etc
@@ -19,8 +19,8 @@ public class User
         // Default Constructor
     }
 
-    public User(String username, String password, int idDesignation)
-    {
+    public User(String name, String username, String password, int idDesignation) {
+        this.name = name;
         this.username = username;
         this.password = password;
         this.idDesignation = idDesignation;
@@ -32,6 +32,14 @@ public class User
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getUsername() {
@@ -62,6 +70,7 @@ public class User
     public String toString() {
         return "User{" +
                 "id=" + id +
+                ", name='" + name + '\'' +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", idDesignation=" + idDesignation +
