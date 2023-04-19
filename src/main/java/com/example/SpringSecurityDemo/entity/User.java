@@ -1,6 +1,5 @@
 package com.example.SpringSecurityDemo.entity;
 
-
 import jakarta.persistence.*;
 
 @Entity
