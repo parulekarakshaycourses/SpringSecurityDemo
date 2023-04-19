@@ -12,11 +12,11 @@ public class User
     Long id;
     String username;
     String password;
-    int idDesignation; // 0 for admin; 1 for employee; 2 for manager; ...
+    int idDesignation; // 0 for admin; 1 for employee; 2 for manager etc
 
     public User()
     {
-
+        // Default Constructor
     }
 
     public User(String username, String password, int idDesignation)
